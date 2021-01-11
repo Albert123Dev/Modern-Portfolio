@@ -1,11 +1,15 @@
 //Widescreen
 @include mediaXL{
-
+ .projects{
+     grid-template-columns: repeat(4,1fr);
+ }
 }
 
 //Desktop & Laptops
 @include mediaLg{
-    
+    .projects{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 
 //Tablets & small laptops
@@ -56,9 +60,15 @@
          'skill3';
          grid-template-columns: 1fr;
     }
+
+    .projects{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 //Smartphones
 @include mediaSm{
-    
+    .projects{
+        grid-template-columns: 1fr;
+    }
 }

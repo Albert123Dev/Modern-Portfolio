@@ -251,12 +251,61 @@ main#home h1 {
   border-bottom: 5px solid #64485c;
 }
 
+.projects {
+  display: grid;
+  grid-gap: .7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projects img {
+  width: 100%;
+}
+
+.projects img:hover {
+  opacity: .5;
+  transition: all .5s ease-out;
+}
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: .3rem;
+}
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: #64485c;
+  color: #fff;
+}
+
+.btn-dark {
+  background: black;
+  color: #fff;
+}
+
+.btn-light {
+  background: #cb737c;
+  color: #333;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #1b0a0c;
   color: #fff;
   height: 60px;
+}
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -292,6 +341,15 @@ main#home h1 {
   }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3';
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projects {
     grid-template-columns: 1fr;
   }
 }
