@@ -123,12 +123,25 @@ main {
 
     img{
         width: 100%;
+        height: auto;
+        object-fit:cover;
+        object-position:50% 50%;
 
         &:hover{
             opacity: .5;
             @include easeOut;
         }
     }
+
+    .flex-space{
+        display: flex;
+        align-items: center;
+       justify-content: center;
+    }
+    .mr-3{
+        margin-right: 9px;
+    }
+
 }
 
 //Contact Page

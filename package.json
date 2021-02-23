@@ -5,8 +5,9 @@
   "main": "index.js",
   "homepage": "https://AlbertSigsbert.github.io/Portfolio",
   "scripts": {
+    "watch": "npm-watch",
     "sass": "node-sass -w sass/ -o dist/css/ --recursive",
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Albert Micah",
   "license": "MIT",
